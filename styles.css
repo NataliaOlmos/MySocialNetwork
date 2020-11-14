@@ -1,0 +1,68 @@
+body{
+  justify-content: center;
+  background-color:#f8edf5  ;
+  font-family: 'Assistant', sans-serif;
+  font-size: x-large;
+  color: #983F82;
+  text-align: center;
+}
+
+nav{
+  background-color: teal;
+  border: 2px solid #983F82;
+}
+
+nav button{
+  background-color: teal;
+  border: 1px solid transparent;
+  font-family: 'Assistant', sans-serif;
+  font-size: x-large;
+  color: #edf8f0;
+  cursor: pointer;
+ }
+ nav button:focus{
+  outline: none;
+
+ }
+
+ nav button:hover{
+  border-color: transparent;
+ }
+
+#homeImg{
+  width: 750px;
+  height: auto;
+  border-radius: 5pt;
+}
+
+
+h5{
+  justify-content: center;
+  font-family: 'Assistant', sans-serif;
+  font-size: x-large;
+  color: #983F82;
+  text-align: center;
+}
+
+
+.allBtns{
+  background-color: teal;
+  display: flex;
+}
+
+.allBtns button{
+  width: 400px;
+  height: auto;
+  background-color: #edf8f0;
+  border: 1px solid transparent;
+  font-family: 'Assistant', sans-serif;
+  font-size: x-large;
+  color: #983F82;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

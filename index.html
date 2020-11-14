@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Social Network</title>
+
+</head>
+<body>
+<header>
+        <nav>
+        <button id="/" class="btn">Home</button>
+        <button id="/login" class="btn">Acceder</button>
+        <button id="/signup" class="btn">Registrarse</button>
+        <button id="/about" class="btn">Mi perfil</button>
+        <button id="/postea" class="btn">Postea</button>
+        <button id="/amigos" class="btn">Amigos</button>
+        <button id="/blog" class="btn">Blog</button>
+    </nav>
+</header>
+
+    <div>
+    <div id="root"></div>
+    </div>
+    <script type="module" src="Router.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+    
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD6ZlZPl9QepT613OXEczF6Dy-Orq__-5I",
+            authDomain: "mysocialnetwork-7d3fc.firebaseapp.com",
+            databaseURL: "https://mysocialnetwork-7d3fc.firebaseio.com",
+            projectId: "mysocialnetwork-7d3fc",
+            storageBucket: "mysocialnetwork-7d3fc.appspot.com",
+            messagingSenderId: "743421820841",
+            appId: "1:743421820841:web:93db7f1cda2cf31e06ceb8",
+            measurementId: "G-2HZ0V44Y4M"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+</body>
+
+</html>
