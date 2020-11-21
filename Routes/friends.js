@@ -2,7 +2,7 @@ let root = document.querySelector('#root')
 
 function renderFriends(){
  
-    let fiendsView=`<div>
+    let fiendsView=`<div class="mainFriends">
     <h5>Amigos</h5>
     <div class="friends"></div>
     </div>`
@@ -20,11 +20,14 @@ function renderFriends(){
           let div = document.createElement('div')
        
         div.innerHTML = `
-        <img src="${element.picture.large}"</>
+       
+        <div class="card">
+        <img class="imageFriend"src="${element.picture.large}"</>
         <p>${element.name.first} ${element.name.last}</p>
-         <p>${element.email}</p>
-         <p>${element.location.country}</p>
-         
+        <p>${element.email}</p>
+        <p>${element.location.country}</p>
+        </div>
+        
         `
         friendList.appendChild(div);
 

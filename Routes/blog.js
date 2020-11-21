@@ -2,7 +2,7 @@ let root = document.querySelector('#root')
 
 function renderBlog(){
  
-    let blogView=`<div>
+    let blogView=`<div class="blogContainer">
     <h5>Blog</h5>
     <div class="album"><img src="https://cdn.vox-cdn.com/thumbor/Q1FQM9-tHfIFOV7n0O6bzbKr20s=/0x0:4560x3300/1400x1050/filters:focal(1916x1286:2644x2014):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/60077225/House_Calls_Brooklyn_Zames_Williams_living_room_2_Matthew_Williams.0.jpg"><div>    
     <a href="url">¡Dale vida a tu espacio con plantas!</a><br>

@@ -5,12 +5,12 @@ function renderSignup(){
     let signupView =`<div class="container" >
     <h4>Regístrate con tu email </h4>
 
-    <input id="txtEmail" type="email" placeholder="Email"><br>
-    <input id="txtPassword"type="password" placeholder="Password"><br>
-    <input id="txtName" type="name" placeholder="Nombre de usuario"><br>
+    <input class="input" id="txtEmail" type="email" placeholder="Email"><br>
+    <input class="input" id="txtPassword"type="password" placeholder="Password"><br>
+    <input class="input" id="txtName" type="name" placeholder="Nombre de usuario"><br>
     
-    <button id="btnSignUp" class="btn btn-action">Registrarse</button>
-    <button id="btnLogout" class="btn btn-action hide">Salir</button>
+    <button class="signUpBtn"id="btnSignUp" class="btn btn-action">Registrarse</button>
+    <button class="signUpBtn"id="btnLogout" class="btn btn-action hide">Salir</button>
 
     </div>`
     root.innerHTML = signupView

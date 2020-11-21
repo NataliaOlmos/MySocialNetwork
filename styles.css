@@ -1,6 +1,6 @@
 body{
   justify-content: center;
-  background-color:#f8edf5  ;
+  background-color:#ead8e6;
   font-family: 'Assistant', sans-serif;
   font-size: x-large;
   color: #983F82;
@@ -19,11 +19,11 @@ nav button{
   font-size: x-large;
   color: #edf8f0;
   cursor: pointer;
- }
+}
+
  nav button:focus{
   outline: none;
-
- }
+}
 
  nav button:hover{
   border-color: transparent;
@@ -35,7 +35,6 @@ nav button{
   border-radius: 5pt;
 }
 
-
 h5{
   justify-content: center;
   font-family: 'Assistant', sans-serif;
@@ -44,25 +43,166 @@ h5{
   text-align: center;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.input{
+  border: 1px solid teal;
+  margin: 2px;
+}
+
+textarea{
+  border: 1px solid teal;
+  margin: 2px;
+}
 
 .allBtns{
-  background-color: teal;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
 }
 
 .allBtns button{
-  width: 400px;
-  height: auto;
-  background-color: #edf8f0;
-  border: 1px solid transparent;
+  width: 220px;
+  height: 40px;
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
-  font-size: x-large;
-  color: #983F82;
-  margin: 10px;
+  font-size: 16px !important;
+  color: #edf8f0;
+  margin: 5px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.signUpBtn{
+  width: 220px;
+  height: 40px;
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px !important;
+  color: #edf8f0;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#postBtn{
+  width: 220px;
+  height: 40px;
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px !important;
+  color: #edf8f0;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#choose-file{
+  width: auto;
+  height: 40px;
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px !important;
+  color: #edf8f0;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainFriends{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.imageFriend{
+  border-radius: 50% ;
+}
+
+.card{
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  margin: 30px;
+  width: 330px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+  color: #edf8f0;
+}
+
+.blogContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.blogContainer img{
+  width: 500px;
+  height: auto;
+  border-radius: 5pt;
+  border: 2px solid teal;
+}
+
+.blogContainer a{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.postContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.postContainer button{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
 }

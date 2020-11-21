@@ -7,13 +7,13 @@ function renderLogin() {
     let loginView =
         `<div class="container">
     <h5>Inicia Sesión para Comenzar</h5>
-    <input id="txtEmail" type="email" placeholder="Email"><br>
-    <input id="txtPassword"type="pas onclick=sword" placeholder="Password"><br>
+    <input class="input" id="txtEmail" type="email" placeholder="Email"><br>
+    <input class="input" id="txtPassword"type="pas onclick=sword" placeholder="Password"><br>
     
     <div class="allBtns">
     <button id="btnLogin" class="btn">Accesar</button>
-    <button class="btn" id="btnFacebook" style="font-size:24px">Acceder con Facebook &nbsp <i class="fa fa-facebook-official"></i></button>
-    <button class="btn" id="btnGoogle" style="font-size:24px">Acceder con Google &nbsp <i class="fa fa-google"></i></button>
+    <button class="btn" id="btnFacebook" style="font-size:24px">Acceder<i class="fa fa-facebook-official"></i></button>
+    <button class="btn" id="btnGoogle" style="font-size:24px">Acceder<i class="fa fa-google"></i></button>
     <button id="btnLogout" class="btn">Salir</button>
     </div> 
     </div>`

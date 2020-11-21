@@ -1,7 +1,6 @@
 import renderPost from './Routes/postIt.js';
 import renderHome from './Routes/home.js';
 import renderLogin from './Routes/login.js';
-import renderAbout from './Routes/profile.js';
 import renderFriends from './Routes/friends.js';
 import renderBlog from './Routes/blog.js';
 import renderSignup from './Routes/signup.js';
@@ -25,9 +24,6 @@ function router(route){
         break;
       case '/postea':
         renderPost();
-        break;
-      case '/about':
-        renderAbout()
         break;
         case '/signup':
        renderSignup();

@@ -5,11 +5,11 @@ function renderPost(){
    </div>
    <div>
    <form>
-      <div>
+      <div class="postContainer">
         <div id="img-preview"></div>
-        <input type="file" id="choose-file" name="choose-file" accept="image/*" />
-        <label for="choose-file">Choose File</label>
-      </div>
+        <input type="file" id="choose-file" name="choose-file" accept="image/*"/>
+        
+     
     </form>
 <p>
    <textarea class="card-text" id="textPost" placeholder="Agrega una descripción"></textarea>
