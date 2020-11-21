@@ -1,24 +1,24 @@
 let root = document.querySelector('#root')
 
-function renderFriends(){
- 
-    let fiendsView=`<div class="mainFriends">
+function renderFriends() {
+
+  let fiendsView = `<div class="mainFriends">
     <h5>Amigos</h5>
     <div class="friends"></div>
     </div>`
-    root.innerHTML = fiendsView
+  root.innerHTML = fiendsView
 
 
- 
- const friendList = document.querySelector('.friends')
- const url = 'https://randomuser.me/api/?results=10';
-    fetch(url)
+
+  const friendList = document.querySelector('.friends')
+  const url = 'https://randomuser.me/api/?results=10';
+  fetch(url)
     .then((res) => res.json())
-    .then(function(data) {
-        console.log(data.results)
-        data.results.forEach((element) => {
-          let div = document.createElement('div')
-       
+    .then(function (data) {
+      console.log(data.results)
+      data.results.forEach((element) => {
+        let div = document.createElement('div')
+
         div.innerHTML = `
        
         <div class="card">
@@ -31,9 +31,9 @@ function renderFriends(){
         `
         friendList.appendChild(div);
 
-       
-          })
-})
+
+      })
+    })
 }
 
 

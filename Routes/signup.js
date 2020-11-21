@@ -1,8 +1,8 @@
 let root = document.querySelector('#root')
 
-function renderSignup(){
-     
-    let signupView =`<div class="container" >
+function renderSignup() {
+
+    let signupView = `<div class="container" >
     <h4>Regístrate con tu email </h4>
 
     <input class="input" id="txtEmail" type="email" placeholder="Email"><br>
@@ -48,8 +48,8 @@ function renderSignup(){
         console.log("Cerrando sesión")
     });
 
-    
-      
-    }
+
+
+}
 
 export default renderSignup;

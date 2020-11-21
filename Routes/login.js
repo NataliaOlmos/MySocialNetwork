@@ -81,18 +81,18 @@ function renderLogin() {
             .then(data => {
                 console.log(data.user)
                 let imgGoo = document.createElement("img");
-            imgGoo.setAttribute("id", "userImg");
-            console.log("imgGoo", imgGoo);
-            imgGoo.src = data.user.photoURL
-            let h6 = document.createElement("h6")
-            h6.innerText = data.user.displayName
+                imgGoo.setAttribute("id", "userImg");
+                console.log("imgGoo", imgGoo);
+                imgGoo.src = data.user.photoURL
+                let h6 = document.createElement("h6")
+                h6.innerText = data.user.displayName
 
                 // //colocarlos
 
-            document.body.appendChild(imgGoo)
-            document.body.appendChild(h6)
-            document.body.appendChild(p)
-            logInGoogle.remove()
+                document.body.appendChild(imgGoo)
+                document.body.appendChild(h6)
+                document.body.appendChild(p)
+                logInGoogle.remove()
             })
     }
 
