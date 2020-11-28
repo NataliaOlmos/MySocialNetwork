@@ -4,28 +4,24 @@ function renderPost() {
    <p>Muéstranos tus ideas!</p>
    <div class="postContainer">
    <input  class="card-img-top img-fluid" alt="Card image cap" id="file" type="file" accept="image/" multiple>
-  
-   <textarea class="card-text" id="textPost" id="" cols="30" rows="10"></textarea>
-  
-   
+   <textarea class="textPost" id="textPost" placeholder="Actualiza tu perfil" type="text" cols="30" rows="10"></textarea>
    <button id="postBtn" class="up">Add Post</button>
-   <img id="preview">
-  <figure></figure>
+   <div id="results">
+   <figure> 
+   </figure>
    </div>
    </div>
-  
-  `
+   `
   root.innerHTML = postNow
 
   let addBtn = document.querySelector("#postBtn");
     let text = document.querySelector("#textPost");
     let fileInput = document.querySelector("#file");
-    let image = document.getElementById('preview')
-
+    let image = document.getElementById('preview');
+    let resultsContainer = document.getElementById('results');
+    const btnDelete = document.querySelector("#deletePost");
     let url
     let src
-    //const user = firebase.auth().currentUser;
-
     let db = firebase.firestore()
     const postsRef = db.collection("posts")
 
@@ -43,41 +39,43 @@ addBtn.addEventListener('click', function(){
     link:src,
     ///user: user,
     date: Date.now(),
-  }
+    body: text.value,
+}
  
   console.log(posts)
   //UPLOAD TO FIREBASE
   writePost(posts)
-  //
-
-  //after upload
-  //FIREBASE
-  //drawResults([posts])
+  drawResults([posts])
   
 })
 
-//al dar click a crear
-// document.querySelector('.up')
-// .addEventListener('click', function(){
-//   //FIREBASE
-//   //if(!user) return alert("Inicia Sesión")
-  
-//   fileInput.click()
-// })
-//al seleccionar la imagen
+
 fileInput.addEventListener('change', function(){
- 
-  let fr = new FileReader()
+ let fr = new FileReader()
   fr.readAsDataURL(fileInput.files[0])
   fr.onload = function(){
       src = fr.result
-      image.src = src
-  }
+      }
 })
 
-
-
-}
+postsRef.onSnapshot(function(snap){
+      snap.forEach(function(doc){
+          drawResults([doc.data()])
+      })
+   })
   
 
-  export default renderPost;
+function drawResults(array){
+    array.forEach(function(el, index, body, id){
+        let figure = document.createElement('figure')
+        figure.innerHTML = `
+            <img src="${el.link}" alt="${index}">
+            <p>${el.body}</p>
+            <p>${el.id}</p>
+            <button class="prueba" >holi</button>
+            `
+        resultsContainer.prepend(figure)
+    }) 
+}
+}
+export default renderPost;
