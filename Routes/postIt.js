@@ -72,7 +72,7 @@ function drawResults(array){
             <img src="${el.link}" alt="${index}">
             <p>${el.body}</p>
             <p>${el.id}</p>
-            <button class="prueba" >holi</button>
+            <button class="prueba" >Borrar</button>
             `
         resultsContainer.prepend(figure)
     }) 
