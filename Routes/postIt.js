@@ -20,8 +20,13 @@ function renderPost() {
     let image = document.getElementById('preview');
     let resultsContainer = document.getElementById('results');
     const btnDelete = document.querySelector("#deletePost");
+    const todayIs = new Date();
+    let dateValue;
+    dateValue = todayIs;
     let url
     let src
+    const user = firebase.auth().currentUser;
+
     let db = firebase.firestore()
     const postsRef = db.collection("posts")
 
@@ -37,8 +42,8 @@ addBtn.addEventListener('click', function(){
   let posts = {
     contentType:file.type,
     link:src,
-    ///user: user,
-    date: Date.now(),
+    user: user,
+    date: Date(),
     body: text.value,
 }
  
@@ -63,19 +68,40 @@ postsRef.onSnapshot(function(snap){
           drawResults([doc.data()])
       })
    })
-  
+
+
+   
 
 function drawResults(array){
-    array.forEach(function(el, index, body, id){
+  resultsContainer.innerHTML = ""
+  array.forEach(function(el, index, body, id, dateValue){
         let figure = document.createElement('figure')
         figure.innerHTML = `
+         <div class="resultsWrapper">
             <img src="${el.link}" alt="${index}">
             <p>${el.body}</p>
-            <p>${el.id}</p>
-            <button class="prueba" >Borrar</button>
+            <p>${el.date}</p>
+            <button id="deletePost" >Borrar</button>
+            <button id="edit" >Editar</button> 
+            </div>
             `
         resultsContainer.prepend(figure)
-    }) 
+
+
+       
+      
+      
+       
+      
+ 
+      })
+      
+      
 }
+
+
+
+
+
 }
 export default renderPost;

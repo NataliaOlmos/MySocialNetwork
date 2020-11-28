@@ -166,6 +166,7 @@ textarea{
   justify-content: center;
   align-content: center;  
   color: #edf8f0;
+  cursor: pointer;
 }
 
 .blogContainer{
@@ -212,14 +213,7 @@ img{
   height: 100px;
 }
 
-#results{
-  display: inline-block;
- 
-  flex-direction: column;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
+
 
 #deletePost{
   width: 100px;
@@ -250,6 +244,18 @@ img{
   color: #edf8f0;
   margin: 5px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultsWrapper{
+  background-color: #cfa6c6;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   text-align: center;
