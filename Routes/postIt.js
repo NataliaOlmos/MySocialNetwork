@@ -86,7 +86,7 @@ function drawResults(array){
             <p>Subido el:<span class="minHeight collapse" id="collapseExample">${el.date.slice(0, -32)}</span></p>
          </div>
         <div id="goTo">
-         <a href="#" target="_blank">Ir a Mi Perfil</a>
+         <a href="./Routes/perfil" target="_blank">Ir a Mi Perfil</a>
         </div> 
             `
         resultsContainer.prepend(figure)

@@ -4,6 +4,7 @@ import renderLogin from './Routes/login.js';
 import renderFriends from './Routes/friends.js';
 import renderBlog from './Routes/blog.js';
 import renderSignup from './Routes/signup.js';
+import renderProfile from './Routes/profile.js'
 
 
 let currentRoute = "/"
@@ -21,6 +22,9 @@ function router(route){
         break;
       case '/amigos':
         renderFriends()
+        break;
+      case '/perfil':
+        renderProfile()
         break;
       case '/postea':
         renderPost();
