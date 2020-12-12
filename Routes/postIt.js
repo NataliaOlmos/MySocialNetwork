@@ -20,7 +20,6 @@ function renderPost() {
     let text = document.querySelector("#textPost");
     let fileInput = document.querySelector("#file");
     let resultsContainer = document.getElementById('results');
-    const btnDelete = document.querySelector("#deletePost");
     const todayIs = new Date();
     let dateValue;
     dateValue = todayIs;
@@ -43,7 +42,6 @@ addBtn.addEventListener('click', function(){
   let posts = {
     contentType:file.type,
     link:src,
-    user: user,
     date: Date(),
     body: text.value,
 }
@@ -86,7 +84,6 @@ function drawResults(array){
             <p>Subido el:<span class="minHeight collapse" id="collapseExample">${el.date.slice(0, -32)}</span></p>
          </div>
         <div id="goTo">
-         <a href="./Routes/perfil" target="_blank">Ir a Mi Perfil</a>
         </div> 
             `
         resultsContainer.prepend(figure)
