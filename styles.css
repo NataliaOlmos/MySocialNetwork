@@ -291,3 +291,21 @@ img{
   align-items: center;
   justify-content: center; 
 }
+
+.profileBtns{
+  width: 220px;
+  height: 40px;
+  background-color: teal;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px !important;
+  color: #edf8f0;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+}

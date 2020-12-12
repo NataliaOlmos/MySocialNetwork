@@ -1,6 +1,6 @@
 // main nodes
 let root = document.querySelector('#root')
-    // first view
+// first view
 function renderHome() {
     let homeView = `<div><br>
     <h1>Ideas de Organización</h1>

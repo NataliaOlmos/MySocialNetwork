@@ -1,31 +1,27 @@
 function renderProfile(){
-    let myProfile= console.log("miperfil")
+    let myProfile= `<div>
+    <h3>Mi perfil</h3>
+    <p>Actividad Reciente</p>
+
+    <div class="postContainer">
+    <button id="deleteBtn" class="profileBtns">Eliminar</button>
+    <button id="editionBtn" class="profileBtns">Editar</button>
+
+    <div id="results">
+    <figure> 
+    </figure>
+   
+    </div>
+    </div>
+    `
     root.innerHTML = myProfile
-    function drawResults(array){
-        //resultsContainer.innerHTML = ""
-        array.forEach(function(el, index, body, id, dateValue){
-              let figure = document.createElement('figure')
-              
-              figure.innerHTML = `
-              
-               <div class="resultsWrapper">
-                  <img id="imgPost" src="${el.link}" alt="${index}">
-                  <p>Descripción:${el.body}</p>
-                  <p>Subido el:<span class="minHeight collapse" id="collapseExample">${el.date.slice(0, -32)}</span></p>
-               </div>
-              <div id="goTo">
-               <a href="./Routes/perfil" target="_blank">Ir a Mi Perfil</a>
-              </div> 
-                  `
-              resultsContainer.prepend(figure)
-      
-      
-            
-            
-             
-            
-       
-            })
-        }
+
+
+    let db = firebase.firestore()
+    const postsRef = db.collection("posts")
+
+    console.log("Firebase Active", firebase)
+
+
 }
 export default renderProfile;
