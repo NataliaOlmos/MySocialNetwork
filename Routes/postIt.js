@@ -27,6 +27,23 @@ function renderPost() {
     let src
     const user = firebase.auth().currentUser;
 
+   
+
+    fileInput.onchange = e => {
+        let file = e.target.files[0]
+        firebase.storage().ref("posts").child(file.name).put(file)
+            .then(snap => {
+                return snap.ref.getDownloadURL()
+            })
+            .then(link => {
+                url = link
+                img.setAttribute("id", "photo");
+                img.src = link;
+                document.body.appendChild(img);
+                console.log(link);
+            })
+    }
+
     let db = firebase.firestore()
     const postsRef = db.collection("posts")
 
@@ -44,6 +61,7 @@ addBtn.addEventListener('click', function(){
     link:src,
     date: Date(),
     body: text.value,
+    
 }
  
   console.log(posts)

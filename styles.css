@@ -1,6 +1,6 @@
 body{
   justify-content: center;
-  background-color:#ead8e6;
+  background-color: #ccabd8;
   font-family: 'Assistant', sans-serif;
   font-size: x-large;
   color: #983F82;
@@ -8,12 +8,12 @@ body{
 }
 
 nav{
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
 }
 
 nav button{
-  background-color: teal;
+  background-color: #055b5c;
   border: 1px solid transparent;
   font-family: 'Assistant', sans-serif;
   font-size: x-large;
@@ -52,12 +52,12 @@ h5{
 }
 
 .input{
-  border: 1px solid teal;
+  border: 1px solid #055b5c;
   margin: 2px;
 }
 
 textarea{
-  border: 1px solid teal;
+  border: 1px solid #055b5c;
   margin: 2px;
 }
 
@@ -72,7 +72,7 @@ textarea{
 .allBtns button{
   width: 220px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -90,7 +90,7 @@ textarea{
 .signUpBtn{
   width: 220px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -108,7 +108,7 @@ textarea{
 #postBtn{
   width: 220px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -126,7 +126,7 @@ textarea{
 #choose-file{
   width: auto;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -154,7 +154,7 @@ textarea{
 }
 
 .card{
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   margin: 30px;
@@ -169,6 +169,7 @@ textarea{
   cursor: pointer;
 }
 
+
 .blogContainer{
   display:flex;
   flex-direction: column;
@@ -181,7 +182,7 @@ textarea{
   width: 500px;
   height: auto;
   border-radius: 5pt;
-  border: 2px solid teal;
+  border: 2px solid #055b5c;
 }
 
 .blogContainer a{
@@ -220,7 +221,7 @@ img{
 #deletePost{
   width: 100px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -238,7 +239,7 @@ img{
 #edit{
   width: 100px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -254,7 +255,7 @@ img{
 }
 
 .resultsWrapper{
-  background-color: #cfa6c6;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   justify-content: center;
@@ -263,13 +264,14 @@ img{
   text-align: center;
   align-items: center;
   justify-content: center;
+  color: #edf8f0;
 }
 
 
 #goTo a{
   width: 220px;
   height: 40px;
-  background-color: teal;
+  background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -292,15 +294,16 @@ img{
   justify-content: center; 
 }
 
-.profileBtns{
+#deletePost{
   width: 220px;
   height: 40px;
-  background-color: teal;
+  background-color:  #ccabd8;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
   font-size: 16px !important;
-  color: #edf8f0;
+  font-weight: bold;
+  color: #055b5c;
   margin: 5px;
   cursor: pointer;
   display: flex;
@@ -308,4 +311,30 @@ img{
   text-align: center;
   align-items: center;
   justify-content: center; 
+}
+
+
+.postContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.card1{
+  background-color: #055b5c;
+  border: 2px solid #983F82;
+  border-radius: 5pt;
+  margin: 30px;
+  margin-bottom: 20px;
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;  
+  color: #edf8f0;
+  cursor: pointer;
 }
