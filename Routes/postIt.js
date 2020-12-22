@@ -17,84 +17,87 @@ function renderPost() {
   root.innerHTML = postNow
 
   let addBtn = document.querySelector("#postBtn");
-    let text = document.querySelector("#textPost");
-    let fileInput = document.querySelector("#file");
-    let resultsContainer = document.getElementById('results');
-    const todayIs = new Date();
-    let dateValue;
-    dateValue = todayIs;
-    let url
-    let src
-    const user = firebase.auth().currentUser;
+  let text = document.querySelector("#textPost");
+  let fileInput = document.querySelector("#file");
+  let resultsContainer = document.getElementById('results');
+  const todayIs = new Date();
+  let dateValue;
+  dateValue = todayIs;
+  let url
+  let src
+  const user = firebase.auth().currentUser;
 
-   
 
-    fileInput.onchange = e => {
-        let file = e.target.files[0]
-        firebase.storage().ref("posts").child(file.name).put(file)
-            .then(snap => {
-                return snap.ref.getDownloadURL()
-            })
-            .then(link => {
-                url = link
-                img.setAttribute("id", "photo");
-                img.src = link;
-                document.body.appendChild(img);
-                console.log(link);
-            })
-    }
 
-    let db = firebase.firestore()
-    const postsRef = db.collection("posts")
+  fileInput.onchange = e => {
+    let file = e.target.files[0]
+    firebase.storage().ref("posts").child(file.name).put(file)
+      .then(snap => {
+        return snap.ref.getDownloadURL()
+      })
+      .then(link => {
+        url = link
+        img.setAttribute("id", "photo");
+        img.src = link;
+        document.body.appendChild(img);
+        console.log(link);
+      })
+  }
+
+  let db = firebase.firestore()
+  const postsRef = db.collection("posts")
 
   console.log("Firebase Active", firebase)
 
-  function writePost(object){
+  function writePost(object) {
     let id = postsRef.doc().id
     object.id = id
     postsRef.doc(id).set(object)
-}
+  }
 
-addBtn.addEventListener('click', function(){
-  let posts = {
-    contentType:file.type,
-    link:src,
-    date: Date(),
-    body: text.value,
-    
-}
- 
-  console.log(posts)
-  //UPLOAD TO FIREBASE
-  writePost(posts)
-  drawResults([posts])
-  
-})
-
-
-fileInput.addEventListener('change', function(){
- let fr = new FileReader()
-  fr.readAsDataURL(fileInput.files[0])
-  fr.onload = function(){
-      src = fr.result
+  addBtn.addEventListener('click', function () {
+    let posts = {
+      contentType: file.type,
+      link: src,
+      date: Date(),
+      body: text.value,
+      id: {
+        id: postsRef.doc().id
       }
-})
 
-postsRef.onSnapshot(function(snap){
-      snap.forEach(function(doc){
-          drawResults([doc.data()])
-      })
-   })
+    }
+
+    console.log(posts)
+    //UPLOAD TO FIREBASE
+    writePost(posts)
+    drawResults([posts])
+
+  })
 
 
-   
+  fileInput.addEventListener('change', function () {
+    let fr = new FileReader()
+    fr.readAsDataURL(fileInput.files[0])
+    fr.onload = function () {
+      src = fr.result
+    }
+  })
 
-function drawResults(array){
-  //resultsContainer.innerHTML = ""
-  array.forEach(function(el, index, body, id, dateValue){
-        let figure = document.createElement('figure')
-        
-        figure.innerHTML = `
+  postsRef.onSnapshot(function (snap) {
+    snap.forEach(function (doc) {
+      drawResults([doc.data()])
+    })
+  })
+
+
+
+
+  function drawResults(array) {
+    //resultsContainer.innerHTML = ""
+    array.forEach(function (el, index, body, id, dateValue) {
+      let figure = document.createElement('figure')
+
+      figure.innerHTML = `
         
          <div class="resultsWrapper">
             <img id="imgPost" src="${el.link}" alt="${index}">
@@ -104,22 +107,9 @@ function drawResults(array){
         <div id="goTo">
         </div> 
             `
-        resultsContainer.prepend(figure)
+      resultsContainer.prepend(figure)
 
-
-      
-      
-       
-      
- 
-      })
-      
-      
-}
-
-
-
-
-
+    })
+  }
 }
 export default renderPost;

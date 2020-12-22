@@ -1,4 +1,4 @@
-body{
+body {
   justify-content: center;
   background-color: #ccabd8;
   font-family: 'Assistant', sans-serif;
@@ -7,12 +7,12 @@ body{
   text-align: center;
 }
 
-nav{
+nav {
   background-color: #055b5c;
   border: 2px solid #983F82;
 }
 
-nav button{
+nav button {
   background-color: #055b5c;
   border: 1px solid transparent;
   font-family: 'Assistant', sans-serif;
@@ -21,21 +21,21 @@ nav button{
   cursor: pointer;
 }
 
- nav button:focus{
+nav button:focus {
   outline: none;
 }
 
- nav button:hover{
+nav button:hover {
   border-color: transparent;
- }
+}
 
-#homeImg{
+#homeImg {
   width: 750px;
   height: auto;
   border-radius: 5pt;
 }
 
-h5{
+h5 {
   justify-content: center;
   font-family: 'Assistant', sans-serif;
   font-size: x-large;
@@ -43,33 +43,33 @@ h5{
   text-align: center;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.input{
+.input {
   border: 1px solid #055b5c;
   margin: 2px;
 }
 
-textarea{
+textarea {
   border: 1px solid #055b5c;
   margin: 2px;
 }
 
-.allBtns{
+.allBtns {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.allBtns button{
+.allBtns button {
   width: 220px;
   height: 40px;
   background-color: #055b5c;
@@ -87,7 +87,7 @@ textarea{
   justify-content: center;
 }
 
-.signUpBtn{
+.signUpBtn {
   width: 220px;
   height: 40px;
   background-color: #055b5c;
@@ -105,7 +105,7 @@ textarea{
   justify-content: center;
 }
 
-#postBtn{
+#postBtn {
   width: 220px;
   height: 40px;
   background-color: #055b5c;
@@ -123,7 +123,7 @@ textarea{
   justify-content: center;
 }
 
-#choose-file{
+#choose-file {
   width: auto;
   height: 40px;
   background-color: #055b5c;
@@ -141,19 +141,19 @@ textarea{
   justify-content: center;
 }
 
-.mainFriends{
+.mainFriends {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.imageFriend{
-  border-radius: 50% ;
+.imageFriend {
+  border-radius: 50%;
 }
 
-.card{
+.card {
   background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
@@ -164,61 +164,58 @@ textarea{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
   color: #edf8f0;
   cursor: pointer;
 }
 
-
-.blogContainer{
-  display:flex;
+.blogContainer {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.blogContainer img{
+.blogContainer img {
   width: 500px;
   height: auto;
   border-radius: 5pt;
   border: 2px solid #055b5c;
 }
 
-.blogContainer a{
-  display:flex;
+.blogContainer a {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.postContainer{
-  display:flex;
+.postContainer {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.postContainer button{
-  display:flex;
+.postContainer button {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-img{
+img {
   width: 200px;
   height: 200px;
   margin: 40px;
-  border-radius:5pt ;
+  border-radius: 5pt;
 }
 
-
-
-#deletePost{
+#deletePost {
   width: 100px;
   height: 40px;
   background-color: #055b5c;
@@ -236,7 +233,7 @@ img{
   justify-content: center;
 }
 
-#edit{
+#edit {
   width: 100px;
   height: 40px;
   background-color: #055b5c;
@@ -254,7 +251,7 @@ img{
   justify-content: center;
 }
 
-.resultsWrapper{
+.resultsWrapper {
   background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
@@ -267,8 +264,7 @@ img{
   color: #edf8f0;
 }
 
-
-#goTo a{
+#goTo a {
   width: 220px;
   height: 40px;
   background-color: #055b5c;
@@ -283,21 +279,21 @@ img{
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
-#goTo{
+#goTo {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
-#deletePost{
+.buttons {
   width: 220px;
   height: 40px;
-  background-color:  #ccabd8;
+  background-color: #ccabd8;
   border: 2px solid #983F82;
   border-radius: 5pt;
   font-family: 'Assistant', sans-serif;
@@ -310,19 +306,18 @@ img{
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
-
-.postContainer{
-  display:flex;
+.main-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
 }
 
-.card1{
+.card1 {
   background-color: #055b5c;
   border: 2px solid #983F82;
   border-radius: 5pt;
@@ -334,7 +329,7 @@ img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;  
+  align-content: center;
   color: #edf8f0;
   cursor: pointer;
 }
