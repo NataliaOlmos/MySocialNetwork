@@ -59,11 +59,10 @@ function renderPost() {
     let posts = {
       contentType: file.type,
       link: src,
+      id: postsRef.doc().id,
       date: Date(),
       body: text.value,
-      id: {
-        id: postsRef.doc().id
-      }
+      name: text.value
 
     }
 
@@ -109,7 +108,20 @@ function renderPost() {
             `
       resultsContainer.prepend(figure)
 
+
+
+
+
+
+
     })
+
+
   }
+
+
+
+
+
 }
 export default renderPost;

@@ -17,6 +17,7 @@ function renderProfile() {
 
     const postsRef = db.collection("posts")
 
+
     console.log("Firebase Active", firebase)
 
 
@@ -28,9 +29,10 @@ function renderProfile() {
                  <img src="${doc.data().link}" alt="${doc.data().index}">
                     <p>${doc.data().body}</p>
                     <p>${doc.data().id}</p>
+                    <p>${doc.data().name}</p>
                     <p>${doc.data().date}</p>
                  
-                    <p><button id="type2" class="buttons">Borrar</button>
+                    <p><button id="deleteBtn" class="buttons">Borrar</button>
                     </div>  
               </div>`
 
@@ -43,11 +45,13 @@ function renderProfile() {
         btnDelete.forEach((buttons) => buttons.addEventListener('click', eliminar));
 
         function eliminar() {
-            db.collection("posts").doc('${id}').delete().then(function () {
-                console.log("Document successfully deleted!");
+            db.collection("posts").doc().delete().then(function () {
+                console.log("Document successfully deleted!", postsRef);
             }).catch(function (error) {
-                console.error("Error removing document:", error);
+                console.error("Error removing document: ", error);
             });
+
+
         };
 
     });
