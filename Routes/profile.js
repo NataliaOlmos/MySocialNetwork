@@ -29,7 +29,6 @@ function renderProfile() {
                  <img src="${doc.data().link}" alt="${doc.data().index}">
                     <p>${doc.data().body}</p>
                     <p>${doc.data().id}</p>
-                    <p>${doc.data().name}</p>
                     <p>${doc.data().date}</p>
                  
                     <p><button id="deleteBtn" class="buttons">Borrar</button>

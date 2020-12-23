@@ -1,3 +1,5 @@
+let root = document.querySelector('#root')
+
 function renderPost() {
   let postNow = `<div>
    <h3>Actualiza</h3>
